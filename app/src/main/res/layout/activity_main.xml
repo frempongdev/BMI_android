@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/constarint_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:backgroundTint="#FFFFFF"
+    android:backgroundTintMode="screen"
+    app:layoutDescription="@xml/activity_main_scene">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cv_weightCard"
+        android:layout_width="350dp"
+        android:layout_height="170dp"
+        android:backgroundTint="#4E0505"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.065">
+
+        <TextView
+            android:id="@+id/tv_kg"
+            android:layout_width="104dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="180dp"
+            android:layout_marginTop="100dp"
+            android:text="KG"
+            android:textColor="#FFEFEF"
+            android:textSize="34sp"
+            tools:layout_conversion_absoluteHeight="49dp"
+            tools:layout_conversion_absoluteWidth="112dp" />
+
+        <EditText
+            android:id="@+id/et_weight"
+            android:layout_width="188dp"
+            android:layout_height="match_parent"
+            android:autofillHints="000"
+            android:ems="10"
+            android:inputType="number"
+            android:hint="000"
+            android:textColorHint="@color/white"
+            android:textColor="#FFE1E1"
+            android:textSize="104sp" />
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cv_heightCard"
+        android:layout_width="350dp"
+        android:layout_height="170dp"
+        android:backgroundTint="#4E0505"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.499">
+
+        <TextView
+            android:id="@+id/tv_cm"
+            android:layout_width="104dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="180dp"
+            android:layout_marginTop="100dp"
+            android:text="CM"
+            android:textColor="#FFEFEF"
+            android:textSize="34sp"
+            tools:layout_conversion_absoluteHeight="49dp"
+            tools:layout_conversion_absoluteWidth="112dp" />
+
+        <EditText
+            android:id="@+id/et_height"
+            android:layout_width="188dp"
+            android:layout_height="match_parent"
+            android:autofillHints="000"
+            android:ems="10"
+            android:inputType="number"
+            android:hint="000"
+            android:textColorHint="@color/white"
+            android:textColor="#FFE1E1"
+            android:textSize="104sp" />
+    </androidx.cardview.widget.CardView>
+
+    <Button
+        android:id="@+id/bt_check"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#FFFFFF"
+        android:elevation="100dp"
+        android:text="Check BMI"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cv_heightCard"
+        app:layout_constraintVertical_bias="0.201" />
+
+    <TextView
+        android:id="@+id/tv_resultsText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#600000"
+        android:textSize="16sp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bt_check"
+        app:layout_constraintVertical_bias="0.284" />
+
+    <TextView
+        android:id="@+id/tv_intro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/cv_weightCard"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.084"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.388" />
+</androidx.constraintlayout.widget.ConstraintLayout>
