@@ -5,8 +5,8 @@
     android:id="@+id/constarint_container"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FFFFFF"
-    android:backgroundTint="#FFFFFF"
+    android:background="#DCC8C8"
+    android:backgroundTint="#E12828"
     android:backgroundTintMode="screen"
     app:layoutDescription="@xml/activity_main_scene">
 
@@ -15,6 +15,8 @@
         android:layout_width="350dp"
         android:layout_height="170dp"
         android:backgroundTint="#4E0505"
+        app:cardCornerRadius="30dp"
+        app:cardElevation="30dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.491"
@@ -40,11 +42,21 @@
             android:layout_height="match_parent"
             android:autofillHints="000"
             android:ems="10"
-            android:inputType="number"
             android:hint="000"
-            android:textColorHint="@color/white"
+            android:inputType="number"
             android:textColor="#FFE1E1"
+            android:textColorHint="@color/white"
             android:textSize="104sp" />
+
+        <TextView
+            android:id="@+id/lb_weight"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:text="Your Weight"
+            android:textAlignment="center"
+            android:textColor="#C58686"
+            android:textSize="20sp" />
     </androidx.cardview.widget.CardView>
 
     <androidx.cardview.widget.CardView
@@ -52,12 +64,14 @@
         android:layout_width="350dp"
         android:layout_height="170dp"
         android:backgroundTint="#4E0505"
+        app:cardCornerRadius="30dp"
+        app:cardElevation="30dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.491"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.499">
+        app:layout_constraintTop_toBottomOf="@+id/cv_weightCard"
+        app:layout_constraintVertical_bias="0.096">
 
         <TextView
             android:id="@+id/tv_cm"
@@ -77,11 +91,21 @@
             android:layout_height="match_parent"
             android:autofillHints="000"
             android:ems="10"
-            android:inputType="number"
             android:hint="000"
-            android:textColorHint="@color/white"
+            android:inputType="number"
             android:textColor="#FFE1E1"
+            android:textColorHint="@color/white"
             android:textSize="104sp" />
+
+        <TextView
+            android:id="@+id/lb_height"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:text="Your Height"
+            android:textAlignment="center"
+            android:textColor="#C58686"
+            android:textSize="20sp" />
     </androidx.cardview.widget.CardView>
 
     <Button
@@ -89,8 +113,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:backgroundTint="#FFFFFF"
-        android:elevation="100dp"
+        android:elevation="200dp"
+        android:shadowRadius="20"
         android:text="Check BMI"
+        android:textColor="#870505"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -103,8 +129,11 @@
         android:id="@+id/tv_resultsText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:textAlignment="center"
         android:textColor="#600000"
-        android:textSize="16sp"
+        android:textSize="20sp"
         android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -120,8 +149,8 @@
         android:textSize="16sp"
         app:layout_constraintBottom_toTopOf="@+id/cv_weightCard"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.084"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.388" />
+        app:layout_constraintVertical_bias="0.266" />
 </androidx.constraintlayout.widget.ConstraintLayout>
